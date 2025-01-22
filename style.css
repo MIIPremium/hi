@@ -27,7 +27,7 @@ body, html {
 }}*/
  body {
         background-image: url('hic6.jpg');
-        
+        background-attachment: fixed;
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
