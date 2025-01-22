@@ -7,7 +7,7 @@ body, html {
 
 @media (max-width: 768px) {
     body {
-        background-image: url('hic5.jpg');
+        background-image: url('hic6.jpg');
        background-attachment: fixed;
        background-size: cover;
         
@@ -19,7 +19,7 @@ body, html {
 
 @media (min-width: 769px) {
     body {
-        background-image: url('hic4.jpg');
+        background-image: url('hic6.jpg');
         background-position: center; 
         background-size: cover;  
         background-repeat: no-repeat; 
