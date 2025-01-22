@@ -7,8 +7,8 @@ body, html {
 
 @media (max-width: 768px) {
     body {
-        background-image: url('hic61.jpg');
-       background-attachment: fixed;
+        background-image: url('new.jpg');
+      /* background-attachment: fixed;*/
        background-size: cover;
         
         background-position: center; 
@@ -19,8 +19,8 @@ body, html {
 
 @media (min-width: 769px) {
     body {
-        background-image: url('hic6.jpg');
-        background-position: center; 
+        background-image: url('new.jpg');
+       /* background-position: center; */
         background-size: cover;  
         background-repeat: no-repeat; 
         background-attachment: fixed;
