@@ -8,9 +8,8 @@ body, html {
 @media (max-width: 768px) {
     body {
         background-image: url('new.jpg');
-      /background-attachment: fixed;
-       background-size: cover;
-        
+        background-attachment: fixed;
+        background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
         
