@@ -7,7 +7,7 @@ body, html {
 
 @media (max-width: 768px) {
     body {
-        background-image: url('hp.jpg');
+        background-image: url('hp1.jpg');
         background-attachment: fixed;
         background-size: cover;
         background-position: center; 
