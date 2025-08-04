@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الأعمال - Business World</title>
+    <!-- تضمين خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- تضمين Tailwind CSS من CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="bg-blue-500 p-4">
+        <!-- حاوية شريط التنقل - تستخدم flexbox للمحاذاة -->
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            
+            <!-- شعار الشركة - يظهر في أقصى اليمين في تخطيط RTL -->
+            <a href="#" class="text-white text-xl font-bold">شعار الشركة</a>
+
+            <!-- زر التبديل للقائمة في شاشات الجوال -->
+            <button id="nav-toggle" class="md:hidden text-white focus:outline-none">
+                <!-- أيقونة قائمة همبرغر باستخدام SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- روابط التنقل - تظهر على اليسار في تخطيط RTL في الشاشات الكبيرة -->
+            <div id="nav-links" class="hidden w-full md:flex md:items-center md:w-auto">
+                <!-- إضافة items-start لمحاذاة الروابط لليسار في شاشات الجوال -->
+                <ul class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse mt-4 md:mt-0 w-full md:w-auto items-start">
+                    <li>
+                        <a href="#" class="block text-white text-lg font-medium hover:text-gray-200 px-3 py-2">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-white text-lg font-medium hover:text-gray-200 px-3 py-2">INFO</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-white text-lg font-medium hover:text-gray-200 px-3 py-2">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <section class="main-content text-center py-20 px-4">
+        <h1 class="text-4xl font-bold mb-4">جارِ العمل</h1>
+        <p class="text-gray-600 text-lg mb-4">على الموقع ...</p>
+        <div class="text-yellow-500 font-bold text-2xl">bwiscompltd.com</div>
+    </section>
+
+    <!-- JavaScript للتبديل بين القائمة في شاشات الجوال -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+
+        // إخفاء القائمة تلقائيًا عند النقر على رابط في الجوال
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!navLinks.classList.contains('hidden')) {
+                    navLinks.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
