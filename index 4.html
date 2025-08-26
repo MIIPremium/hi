@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business World - عالم الأعمال</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Updated Font Awesome CDN link to a newer version to support the X icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f7f9fc;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #1a202c, #2d3748);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .text-gold {
+            color: #C7A064; /* A deep golden color to match the logo */
+        }
+        .bg-gold {
+            background-color: #C7A064;
+        }
+        .hover-bg-gold:hover {
+            background-color: #C7A064;
+        }
+        .border-gold {
+            border-color: #C7A064;
+        }
+        .lang-en {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            text-align: left;
+        }
+        /* Style for the language toggle button */
+        #lang-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #1a202c; /* Dark color for visibility */
+            color: white;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        #lang-toggle:hover {
+            transform: scale(1.05);
+            background-color: #2d3748;
+        }
+        .social-icons a {
+            transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Development Banner -->
+    <div id="development-banner" class="bg-gold text-white text-center py-3 px-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <span id="dev-message-ar" class="flex-grow text-sm md:text-base">
+                الموقع قيد التحديث والتطوير المستمر لتقديم تجربة أفضل.
+            </span>
+            <span id="dev-message-en" class="flex-grow text-sm md:text-base hidden">
+                This website is currently under continuous development and updates to provide a better experience.
+            </span>
+            <button id="close-banner" class="text-white text-xl font-bold ml-4 mr-0 md:mr-4 hover:text-gray-200 transition-colors duration-200" aria-label="Close banner">&times;</button>
+        </div>
+    </div>
+
+    <!-- Language Toggle Button -->
+    <div id="lang-toggle">English</div>
+
+    <!-- Main Content Container -->
+    <div id="content">
+
+        <!-- Header & Navigation -->
+        <header class="bg-white shadow-lg rounded-b-xl">
+            <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+                <a href="#" class="text-3xl font-bold text-gray-800">
+                    <span class="text-gold">عالم</span> الأعمال
+                </a>
+                <nav class="mt-4 md:mt-0">
+                    <!-- Increased the space between navigation links to space-x-8 -->
+                    <ul class="flex space-x-8 space-x-reverse text-lg" id="nav-menu-ar">
+                        <li><a href="#about" class="text-gray-600 hover:text-gold transition-colors duration-300">من نحن</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-gold transition-colors duration-300">خدماتنا</a></li>
+                        <li><a href="#projects" class="text-gray-600 hover:text-gold transition-colors duration-300">مشاريعنا</a></li>
+                        <li><a href="#contact" class="text-gray-600 hover:text-gold transition-colors duration-300">اتصل بنا</a></li>
+                    </ul>
+                    <ul class="flex space-x-8 text-lg hidden" id="nav-menu-en">
+                        <li><a href="#about" class="text-gray-600 hover:text-gold transition-colors duration-300">About Us</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-gold transition-colors duration-300">Services</a></li>
+                        <li><a href="#projects" class="text-gray-600 hover:text-gold transition-colors duration-300">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-600 hover:text-gold transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-20 px-4 bg-white rounded-b-xl shadow-md">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0" id="hero-ar">
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
+                        <span class="text-gold">قيادة المستقبل</span> <br>
+                        نحو نمو مستدام.
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-600">
+                        البوابة الموثوقة للاستثمار وإدارة المشاريع في اليمن. نقدم حلولًا مبتكرة لتمكين المستثمرين من تحقيق أفضل النتائج.
+                    </p>
+                    <div class="mt-8 flex space-x-4 space-x-reverse">
+                        <a href="#services" class="bg-gold text-white font-bold py-3 px-8 rounded-full shadow-lg hover-bg-gold transition-all duration-300 transform hover:scale-105">
+                            اكتشف خدماتنا
+                        </a>
+                        <a href="#contact" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-300 transition-all duration-300 transform hover:scale-105">
+                            تواصل معنا
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mb-8 md:mb-0 hidden" id="hero-en">
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
+                        <span class="text-gold">Leading the Future</span> <br>
+                        towards Sustainable Growth.
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-600">
+                        The Reliable Gateway for Investment and Project Management in Yemen. We provide innovative solutions to empower investors to achieve optimal results.
+                    </p>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#services" class="bg-gold text-white font-bold py-3 px-8 rounded-full shadow-lg hover-bg-gold transition-all duration-300 transform hover:scale-105">
+                            Discover Our Services
+                        </a>
+                        <a href="#contact" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-300 transition-all duration-300 transform hover:scale-105">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-gold opacity-20 rounded-full animate-pulse"></div>
+                        <img src="logo 1.jpg" alt="شعار الشركة" class="relative rounded-full border-4 border-white shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12" id="about-heading-ar">من نحن</h2>
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 hidden" id="about-heading-en">About Us</h2>
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl flex flex-col lg:flex-row items-center" id="about-content-ar">
+                    <div class="lg:w-1/2 mb-6 lg:mb-0 lg:ml-8">
+                        <img src="https://placehold.co/600x400/D4AF37/ffffff?text=About+Us" alt="صورة توضيحية عن الشركة" class="rounded-xl shadow-lg">
+                    </div>
+                    <div class="lg:w-1/2 text-right">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            شركة **عالم الأعمال للاستثمار والدراسات المحدودة** هي شركة وطنية أسسها الدكتور ربيع بن علي العوبثاني في مارس 2021. نحن متخصصون في إدارة وتشغيل المشاريع، وإجراء الدراسات الاقتصادية، وتقديم الاستشارات الإدارية والمالية والتسويقية، وحلول تكنولوجيا المعلومات.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            نقدم خدماتنا من خلال فريق من الخبراء والاستشاريين المتخصصين لتمكين المستثمرين وأصحاب المصلحة من الحصول على أفضل النتائج والمنافع الاقتصادية.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl flex flex-col lg:flex-row-reverse items-center hidden" id="about-content-en">
+                    <div class="lg:w-1/2 mb-6 lg:mb-0 lg:mr-8">
+                        <img src="https://placehold.co/600x400/D4AF37/ffffff?text=About+Us" alt="Company illustration" class="rounded-xl shadow-lg">
+                    </div>
+                    <div class="lg:w-1/2 text-left">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            **Business World Company Ltd. for Investment and Studies** is a national limited company founded by Dr. Rabea Ali Al-Awbathani in Mukalla in March 2021. The company specializes in managing and running projects, conducting economic studies, and providing management, financial, and marketing consulting services, as well as information technology solutions.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Our services are delivered by a team of specialized experts and consultants to empower investors and stakeholders to achieve optimal results and economic benefits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <!-- Added a top margin (mt-12) to create a visual separation from the previous section -->
+        <section id="services" class="py-20 px-4 bg-gray-50 ">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12" id="services-heading-ar">خدماتنا</h2>
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 hidden" id="services-heading-en">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid-ar">
+                    <!-- Service Card 1 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">إدارة المشاريع والدراسات</h3>
+                        <p class="text-gray-600">
+                            إدارة وتشغيل المشاريع، عمل دراسات الجدوى الاقتصادية المتكاملة، وتصميم الاستراتيجيات الفعالة.
+                        </p>
+                    </div>
+                    <!-- Service Card 2 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-cogs text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">الاستشارات المتخصصة</h3>
+                        <p class="text-gray-600">
+                            استشارات إدارية، مالية، تسويقية، تشغيلية، وأنظمة جودة للقطاعين الخاص والعام.
+                        </p>
+                    </div>
+                    <!-- Service Card 3 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-laptop-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">حلول تكنولوجيا المعلومات</h3>
+                        <p class="text-gray-600">
+                            تقديم الحلول في تكنولوجيا المعلومات وقيادة مشاريع التحول الرقمي للقطاعين الخاص والعام.
+                        </p>
+                    </div>
+                    <!-- Service Card 4 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-building text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">الحوكمة والبناء المؤسسي</h3>
+                        <p class="text-gray-600">
+                            تعزيز أداء الشركات والمؤسسات من خلال تطبيق أنظمة إدارية نوعية ومبتكرة.
+                        </p>
+                    </div>
+                    <!-- Service Card 5 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-users-cog text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">بناء الشركات الناشئة</h3>
+                        <p class="text-gray-600">
+                            تقديم الاستشارات والخبرات لرواد الأعمال ومساعدتهم لإدارة مشاريعهم بنجاح.
+                        </p>
+                    </div>
+                    <!-- Service Card 6 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-handshake text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">تطوير الموارد البشرية</h3>
+                        <p class="text-gray-600">
+                            بناء وتطوير فرق عمل قوية ومتجانسة لخلق الميزة التنافسية للشركات.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden" id="services-grid-en">
+                    <!-- Service Card 1 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Management & Studies</h3>
+                        <p class="text-gray-600">
+                            Managing and operating projects, conducting comprehensive economic feasibility studies, and designing effective strategies.
+                        </p>
+                    </div>
+                    <!-- Service Card 2 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-cogs text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Specialized Consulting</h3>
+                        <p class="text-gray-600">
+                            Providing administrative, financial, marketing, operational, and quality systems consulting for both private and public sectors.
+                        </p>
+                    </div>
+                    <!-- Service Card 3 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-laptop-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">IT Solutions</h3>
+                        <p class="text-gray-600">
+                            Offering IT solutions and leading digital transformation projects for private and public sectors.
+                        </p>
+                    </div>
+                    <!-- Service Card 4 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-building text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Governance & Institutional Building</h3>
+                        <p class="text-gray-600">
+                            Enhancing the performance of companies and institutions by implementing qualitative and innovative management systems.
+                        </p>
+                    </div>
+                    <!-- Service Card 5 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-users-cog text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Venture Building</h3>
+                        <p class="text-gray-600">
+                            Providing consulting and expertise to entrepreneurs and assisting them in successfully managing their projects.
+                        </p>
+                    </div>
+                    <!-- Service Card 6 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="bg-gray-100 text-gold rounded-full p-4 mb-4">
+                            <i class="fas fa-handshake text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Human Resources Development</h3>
+                        <p class="text-gray-600">
+                            Building and developing strong and cohesive teams to create a competitive advantage for companies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12" id="projects-heading-ar">مشاريعنا وشراكاتنا</h2>
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 hidden" id="projects-heading-en">Our Projects & Partnerships</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Project Card 1 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row-reverse items-center" id="project-card-1-ar">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8 md:ml-0">
+                            <img src="https://placehold.co/300x200/D4AF37/ffffff?text=HIC+College" alt="صورة مشروع كلية المجتمع" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-2/3 text-right">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">كلية مجتمع حضرموت الدولية</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                أول كلية مجتمع خاصة في حضرموت، تهدف إلى تأهيل كادر مهني محترف يلبي احتياجات سوق العمل المتغير.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Project Card 1 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center hidden" id="project-card-1-en">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:ml-8 md:mr-0">
+                            <img src="https://placehold.co/300x200/D4AF37/ffffff?text=HIC+College" alt="Hadhramout International Community College" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-2/3 text-left">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Hadhramout International Community College</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                The first private community college in Hadhramout, aiming to train a professional workforce that meets the changing market needs.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row-reverse items-center" id="project-card-2-ar">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8 md:ml-0">
+                            <img src="https://placehold.co/300x200/D4AF37/ffffff?text=Premium+Academy" alt="صورة أكاديمية بريميوم" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-2/3 text-right">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">أكاديمية بريميوم للقيادة والإدارة</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                مؤسسة تعليمية رائدة في مجالات القيادة، إدارة الأعمال، تكنولوجيا المعلومات، واللغة الإنجليزية.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center hidden" id="project-card-2-en">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:ml-8 md:mr-0">
+                            <img src="https://placehold.co/300x200/D4AF37/ffffff?text=Premium+Academy" alt="Premium Academy of Leadership and Management" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-2/3 text-left">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium Academy of Leadership & Management</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                A leading educational institution in leadership, business management, IT, and English language education.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 (AR) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row-reverse items-center" id="project-card-3-ar">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8 md:ml-0">
+                            <img src="mii.jpg" alt="صورة المعهد الدولي الحديث" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-2/3 text-right">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">المعهد الدولي الحديث</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                يقدم برامج تدريبية شاملة في اللغة الإنجليزية وتطبيقات الحاسوب لخريجي الثانوية وطلاب الجامعات.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 (EN) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center hidden" id="project-card-3-en">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:ml-8 md:mr-0">
+                            <img src="mii.jpg" alt="Modern International Institute" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-2/3 text-left">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Modern International Institute (MII)</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                It offers comprehensive training programs in English and computer applications for high school and university graduates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="py-20 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col md:flex-row items-center justify-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:ml-8" id="location-ar">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">موقعنا الجغرافي</h2>
+                        <p class="text-lg text-gray-600 mb-4">
+                            حضرموت، المكلا، شارع الهايبر
+                        </p>
+                        <a href="https://maps.app.goo.gl/pLdG9Z4v3fV7J7rV9" target="_blank" class="bg-gold text-white font-bold py-3 px-8 rounded-full shadow-lg hover-bg-gold transition-all duration-300 transform hover:scale-105 inline-block">
+                            <i class="fas fa-map-marker-alt"></i> اعرض على الخريطة
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:ml-8 hidden" id="location-en">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Location</h2>
+                        <p class="text-lg text-gray-600 mb-4">
+                            Hadhramout, Mukalla, Al-hayber Street 
+                        </p>
+                        <a href="https://maps.app.goo.gl/pLdG9Z4v3fV7J7rV9" target="_blank" class="bg-gold text-white font-bold py-3 px-8 rounded-full shadow-lg hover-bg-gold transition-all duration-300 transform hover:scale-105 inline-block">
+                            <i class="fas fa-map-marker-alt"></i> View on Map
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d402.6651450718717!2d49.11929067283508!3d14.532007805551894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3de8e7da9ad261ab%3A0xfe964f7789f3dc1!2zQnVzaW5lc3MgV29ybGQg2LnYp9mE2YUg2KfZhNij2LnZhdin2YQ!5e1!3m2!1sar!2s!4v1754297111178!5m2!1sar!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                       <!-- <img src="https://placehold.co/600x400/D4AF37/ffffff?text=Office+Location" alt="صورة توضيحية للموقع" class="w-full h-full object-cover">-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <!-- Reduced vertical padding and font sizes for a smaller footer -->
+        <footer class="bg-gray-800 text-white py-4 px-4 mt-8 rounded-t-2xl">
+            <div class="container mx-auto text-center flex flex-col items-center">
+                <!-- Social Media Section (AR) -->
+                <div class="bottom-social mb-4 text-center" id="social-ar">
+                    <h2 class="text-xl font-bold mb-3">تابعنا على وسائل التواصل الاجتماعي</h2>
+                    <div class="social-icons flex justify-center space-x-4 space-x-reverse">
+                        <a href="https://www.facebook.com/bwiscompltd" target="_blank" class="text-2xl text-white hover:text-blue-600 transition-colors duration-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/bwiscompltd?t=omxdUvj1CEY--LX0xQsJSQ&s=09" target="_blank" class="text-2xl text-white hover:text-gray-400 transition-colors duration-200"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/bwiscompltd?igsh=c3NxOTJhZTQ0ejU=" target="_blank" class="text-2xl text-white hover:text-pink-500 transition-colors duration-200"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/business-world-company-ltd" target="_blank" class="text-2xl text-white hover:text-blue-500 transition-colors duration-200"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:info@bwiscompltd.com" target="_blank" title="ارسل لنا إيميل" class="text-2xl text-white hover:text-yellow-500 transition-colors duration-200"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                 <!-- Social Media Section (EN) -->
+                 <div class="bottom-social mb-4 text-center hidden" id="social-en">
+                    <h2 class="text-xl font-bold mb-3">Follow Us on Social Media</h2>
+                    <div class="social-icons flex justify-center space-x-4">
+                        <a href="https://www.facebook.com/bwiscompltd" target="_blank" class="text-2xl text-white hover:text-blue-600 transition-colors duration-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/bwiscompltd?t=omxdUvj1CEY--LX0xQsJSQ&s=09" target="_blank" class="text-2xl text-white hover:text-gray-400 transition-colors duration-200"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/bwiscompltd?igsh=c3NxOTJhZTQ0ejU=" target="_blank" class="text-2xl text-white hover:text-pink-500 transition-colors duration-200"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/business-world-company-ltd" target="_blank" class="text-2xl text-white hover:text-blue-500 transition-colors duration-200"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:info@bwiscompltd.com" target="_blank" title="Send us an email" class="text-2xl text-white hover:text-yellow-500 transition-colors duration-200"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <p id="footer-text-ar" class="mt-2 text-sm">&copy; 2024 شركة عالم الأعمال. جميع الحقوق محفوظة.</p>
+                <p id="footer-text-en" class="hidden mt-2 text-sm">&copy; 2024 Business World Company. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div> <!-- End of content container -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langToggle = document.getElementById('lang-toggle');
+            const closeBannerBtn = document.getElementById('close-banner');
+            const developmentBanner = document.getElementById('development-banner');
+            const body = document.body;
+
+            const contentSections = [
+                '#hero-ar', '#hero-en',
+                '#about-heading-ar', '#about-heading-en',
+                '#about-content-ar', '#about-content-en',
+                '#services-heading-ar', '#services-heading-en',
+                '#services-grid-ar', '#services-grid-en',
+                '#projects-heading-ar', '#projects-heading-en',
+                '#project-card-1-ar', '#project-card-1-en',
+                '#project-card-2-ar', '#project-card-2-en',
+                '#project-card-3-ar', '#project-card-3-en',
+                '#location-ar', '#location-en',
+                '#social-ar', '#social-en',
+                '#footer-text-ar', '#footer-text-en',
+                '#nav-menu-ar', '#nav-menu-en',
+                '#dev-message-ar', '#dev-message-en'
+            ];
+
+            langToggle.addEventListener('click', () => {
+                if (langToggle.textContent === 'English') {
+                    // Switch to English
+                    body.classList.add('lang-en');
+                    body.classList.remove('text-right');
+                    body.classList.add('text-left');
+                    langToggle.textContent = 'عربي';
+
+                    contentSections.forEach(selector => {
+                        const element = document.querySelector(selector);
+                        if (element) {
+                            if (selector.endsWith('-ar')) {
+                                element.classList.add('hidden');
+                            } else {
+                                element.classList.remove('hidden');
+                            }
+                        }
+                    });
+                } else {
+                    // Switch to Arabic
+                    body.classList.remove('lang-en');
+                    body.classList.remove('text-left');
+                    body.classList.add('text-right');
+                    langToggle.textContent = 'English';
+
+                    contentSections.forEach(selector => {
+                        const element = document.querySelector(selector);
+                        if (element) {
+                            if (selector.endsWith('-en')) {
+                                element.classList.add('hidden');
+                            } else {
+                                element.classList.remove('hidden');
+                            }
+                        }
+                    });
+                }
+            });
+
+            closeBannerBtn.addEventListener('click', () => {
+                developmentBanner.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
