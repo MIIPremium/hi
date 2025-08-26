@@ -88,10 +88,15 @@
 
         <!-- Header & Navigation -->
         <header class="bg-white shadow-lg rounded-b-xl">
-            <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-                <a href="#" class="text-3xl font-bold text-gray-800">
-                    <span class="text-gold">عالم</span> الأعمال
-                </a>
+            <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">   
+                <div class="text-3xl font-bold text-gray-800">
+                    <a href="#" id="logo-ar" class="text-3xl font-bold text-gray-800">
+                        <span class="text-gold">عالم</span> الأعمال
+                    </a>
+                    <a href="#" id="logo-en" class="text-3xl font-bold text-gray-800 hidden">
+                        <span class="text-gold">Business</span> World
+                    </a>
+                </div>
                 <nav class="mt-4 md:mt-0">
                     <!-- Increased the space between navigation links to space-x-8 -->
                     <ul class="flex space-x-8 space-x-reverse text-lg" id="nav-menu-ar">
@@ -439,7 +444,7 @@
 
         <!-- Footer -->
         <!-- Reduced vertical padding and font sizes for a smaller footer -->
-        <footer class="bg-gray-800 text-white py-4 px-4 mt-8 rounded-t-2xl">
+        <footer id="contact" class="bg-gray-800 text-white py-4 px-4 mt-8 rounded-t-2xl">
             <div class="container mx-auto text-center flex flex-col items-center">
                 <!-- Social Media Section (AR) -->
                 <div class="bottom-social mb-4 text-center" id="social-ar">
@@ -493,6 +498,10 @@
                 '#nav-menu-ar', '#nav-menu-en',
                 '#dev-message-ar', '#dev-message-en'
             ];
+            
+            // New sections for the logo
+            const logoAr = document.getElementById('logo-ar');
+            const logoEn = document.getElementById('logo-en');
 
             langToggle.addEventListener('click', () => {
                 if (langToggle.textContent === 'English') {
@@ -501,6 +510,10 @@
                     body.classList.remove('text-right');
                     body.classList.add('text-left');
                     langToggle.textContent = 'عربي';
+
+                    // Hide Arabic logo, show English logo
+                    logoAr.classList.add('hidden');
+                    logoEn.classList.remove('hidden');
 
                     contentSections.forEach(selector => {
                         const element = document.querySelector(selector);
@@ -518,6 +531,10 @@
                     body.classList.remove('text-left');
                     body.classList.add('text-right');
                     langToggle.textContent = 'English';
+
+                    // Show Arabic logo, hide English logo
+                    logoAr.classList.remove('hidden');
+                    logoEn.classList.add('hidden');
 
                     contentSections.forEach(selector => {
                         const element = document.querySelector(selector);
@@ -539,6 +556,7 @@
     </script>
 </body>
 </html>
+
 
 
 
